@@ -4,7 +4,7 @@ block content
 	.container
 		h1 Application for Senior Web Developer at Omega 3 Studios
 
-		form(action="/submitapplication", method="post")
+		form#application-form(action="/submitapplication", method="post")
 			.form-group
 				input.form-control(name="name", type="text", placeholder="Name")
 			.form-group
@@ -17,3 +17,6 @@ block content
 				textarea.form-control(name="why", rows="5",placeholder="Why do you want to work here?")
 			.form-group
 				input.btn.btn-default(type="submit")
+		
+		#success-message.alert.alert-success.hidden
+			| Application submitted!
