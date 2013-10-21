@@ -27,11 +27,20 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
+//renders the index page
 app.get('/', function(req, res){
 	res.render('index')
 });
+
+// displays a list of applicants
 app.get('/applicants', function(req, res){
 	res.render('applicants')
+});
+
+// creates and applicant
+app.post('/applicant', function(req, res){
+	// Here is where you need to get the data
+	// from the post body and store it
 });
 
 http.createServer(app).listen(app.get('port'), function(){
